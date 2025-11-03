@@ -1,7 +1,6 @@
 # Práctica 3: Implementación de Chat Concurrente
+**Kerin Del Jesus Gonzalez Maas**
 
-
----
 
 ## 1. Cliente.java
 
