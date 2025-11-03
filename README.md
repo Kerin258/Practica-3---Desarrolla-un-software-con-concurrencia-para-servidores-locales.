@@ -1,6 +1,5 @@
 # Práctica 3: Implementación de Chat Concurrente
 
-Descripción del proyecto de chat concurrente en Java, utilizando Sockets, hilos (`Threads`), un `ExecutorService` para el servidor y una arquitectura de manejadores (`Handlers`) para la comunicación de lectura y escritura.
 
 ---
 
@@ -15,7 +14,6 @@ Descripción del proyecto de chat concurrente en Java, utilizando Sockets, hilos
         * La lógica de `main` se simplificó, cambiando la estructura de `switch` por un `if-else` más directo.
         * La lógica para solicitar datos y crear el `Socket` se encapsuló en un método separado (`establecerConexion()`) para un código más limpio.
     * **Manejo de Recursos:** Se utiliza `try-with-resources` para el `Scanner` que lee los datos de conexión, asegurando que se cierre correctamente.
-    * **Renombramiento:** Se cambiaron los nombres de las variables internas (ej. `socketConexion`, `PUERTO_DESTINO`) para mejorar la legibilidad.
 
 ---
 
@@ -33,7 +31,6 @@ Descripción del proyecto de chat concurrente en Java, utilizando Sockets, hilos
         * A diferencia de un bucle `for` con banderas booleanas, la lógica para `/send-msg` se implementó usando `Streams` y `Optional`. Esto permite una búsqueda de usuario más limpia y moderna (`.stream().filter(...).findFirst()`).
         * La lógica de `/global-msg` y la notificación de cambio de nombre también usan `Streams` (`.stream().filter().forEach()`) para difundir el mensaje a los clientes relevantes.
     * **Manejo de E/S:** Se configuró el `PrintWriter` para usar `autoFlush=true`, eliminando la necesidad de llamar a `.flush()` manualmente después de cada mensaje.
-    * **Renombramiento:** Todos los métodos y variables internas fueron renombrados para mayor claridad y para diferenciar la implementación (ej. `procesarMensajePrivado`, `nombreDeUsuario`, `listaClientes`).
 
 ---
 
@@ -53,7 +50,7 @@ Descripción del proyecto de chat concurrente en Java, utilizando Sockets, hilos
 
 ---
 
-## 5. ChatServer.java (Asumido)
+## 5. ChatServer.java 
 
 * **Función:** El servidor principal. Escucha en un puerto específico por conexiones entrantes.
 * **Mejoras (Basadas en la lógica de `ClientHandler`):**
