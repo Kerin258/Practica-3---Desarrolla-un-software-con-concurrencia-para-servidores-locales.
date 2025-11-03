@@ -17,8 +17,6 @@
 ---
 
 ## 2. ClientHandler.java
-
-* **Paquete:** `Procesadores` (Se movió a un paquete distinto de `Handlers` para separar responsabilidades).
 * **Función:** Es la clase clave del lado del servidor. Cada instancia de `ClientHandler` es ejecutada en su propio hilo por el `ExecutorService` del servidor. Gestiona la lógica de un cliente individual, su estado (como el `nombreDeUsuario`) y procesa todos sus comandos.
 * **Modificaciones y Mejoras Significativas:**
     * **Interfaz de Comandos:** Implementa un procesador de comandos que responde a las siguientes acciones:
